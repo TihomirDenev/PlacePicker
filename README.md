@@ -1,27 +1,64 @@
-# Http
+<h2 align="center">
+  Welcome to the PlacePicker<br/>
+  <a href="https://github.com/TihomirDenev/PlacePicker" target="_blank">Check it out on GitHub</a>
+</h2>
+<div align="center">
+  <img src="public/logo.png" alt="Place Picker" style="height: 160px;" />
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
 
-## Development server
+# 📝 Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+# 🔎 Example
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 🗃️ Technologies Used
 
-## Running end-to-end tests
+- **_Angular 18:_** For building a responsive and dynamic single-page application.
+- **_TypeScript:_** To ensure type safety and scalable application development.
+- **_CSS:_** For custom styling and responsive design.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# 💡 Features
 
-## Further help
+- **_Real-time Updates:_** Instantly see updates in investment projections as you modify inputs.
+- **_Responsive Design:_** Works seamlessly across various devices and screen sizes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# ✅ Getting Started
+
+1. Clone the Place Picker [GitHub repository](https://github.com/TihomirDenev/PlacePicker) locally:
+
+```bash
+https://github.com/TihomirDenev/PlacePicker.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd PlacePicker
+```
+
+3. Install Dependencies Before running the project.
+
+```bash
+npm install
+```
+
+4. To run the project, use the following command:
+
+```bash
+npm run start
+```
+
+5. Open localhost link in browser to view web-platform.
+
+# ✨ Contributing
+
+- I welcome contributions to the Place Picker project! If you have suggestions, feel free to open an issue or submit a pull request.
+
+# 📇 License
+
+- This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
