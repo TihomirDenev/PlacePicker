@@ -13,7 +13,7 @@ import { PlacesService } from "../places.service";
   imports: [PlacesComponent, PlacesContainerComponent],
 })
 export class AvailablePlacesComponent implements OnInit {
-  places = signal<Place[] | undefined>(undefined);
+  places = signal<Place[]>([]);
   isFetching = signal(false);
   error = signal("");
   private placesService = inject(PlacesService);
