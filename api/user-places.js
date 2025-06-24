@@ -1,9 +1,26 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
+const isProd = process.env.NODE_ENV === 'production';
+const userPlacesPath = isProd
+  ? '/tmp/user-places.json'
+  : path.join(process.cwd(), 'backend/data/user-places.json');
+const placesPath = path.join(process.cwd(), 'backend/data/places.json');
+
+async function ensureTmpUserPlacesFile() {
+  if (isProd) {
+    try {
+      await fs.access(userPlacesPath);
+    } catch {
+      const original = path.join(process.cwd(), 'backend/data/user-places.json');
+      const data = await fs.readFile(original, 'utf-8');
+      await fs.writeFile(userPlacesPath, data);
+    }
+  }
+}
+
 export default async function handler(req, res) {
-  const userPlacesPath = path.join(process.cwd(), 'backend/data/user-places.json');
-  const placesPath = path.join(process.cwd(), 'backend/data/places.json');
+  await ensureTmpUserPlacesFile();
 
   if (req.method === 'GET') {
     const fileContent = await fs.readFile(userPlacesPath, 'utf-8');
