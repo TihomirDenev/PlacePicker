@@ -18,14 +18,14 @@ export class PlacesService {
 
   loadAvailablePlaces() {
     return this.fetchPlaces(
-      "http://localhost:3000/places",
+      "/api/places",
       "Something went wrong fetching the available places. Place try again later."
     );
   }
 
   loadUserPlaces() {
     return this.fetchPlaces(
-      "http://localhost:3000/user-places",
+      "/api/user-places",
       "Something went wrong fetching your favorite places. Place try again later."
     ).pipe(
       tap({
@@ -42,7 +42,7 @@ export class PlacesService {
     }
 
     return this.httpClient
-      .put("http://localhost:3000/user-places", {
+      .put("/api/user-places", {
         placeId: place.id,
       })
       .pipe(
@@ -64,7 +64,7 @@ export class PlacesService {
     }
 
     return this.httpClient
-      .delete(`http://localhost:3000/user-places/${place.id}`)
+      .delete(`/api/user-places/${place.id}`)
       .pipe(
         catchError((error) => {
           this.userPlaces.set(prevPlaces);
