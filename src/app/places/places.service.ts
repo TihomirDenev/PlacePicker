@@ -64,7 +64,7 @@ export class PlacesService {
     }
 
     return this.httpClient
-      .delete(`/api/user-places/${place.id}`)
+      .delete(`/api/user-places?id=${place.id}`)
       .pipe(
         catchError((error) => {
           this.userPlaces.set(prevPlaces);
